@@ -9,3 +9,5 @@ $app = require __DIR__ . '/../bootstrap/app.php';
 $kernel = $app->make(
   Ethereal\Foundation\Http\Kernel::class
 );
+
+var_dump($app);
