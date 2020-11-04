@@ -4,10 +4,10 @@ namespace Ethereal\Support;
 
 class Arr
 {
-  public static function isAssoc($arr)
-  {
-    $indexes = array_keys($arr);
+    public static function isAssoc($arr)
+    {
+        $indexes = array_keys($arr);
     
-    return array_keys($indexes) !== $indexes;
-  }
+        return array_keys($indexes) !== $indexes;
+    }
 }

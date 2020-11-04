@@ -7,33 +7,32 @@ use Countable;
 
 class Collection implements ArrayAccess, Countable
 {
-  public function __construct()
-  {
-    
-  }
+    public function __construct()
+    {
+    }
   
-  public function count()
-  {
-    return 0;
-  }
+    public function count()
+    {
+        return 0;
+    }
   
-  public function offsetExists($index)
-  {
-    return false;
-  }
+    public function offsetExists($index)
+    {
+        return false;
+    }
   
-  public function offsetGet($index)
-  {
-    return $index;
-  }
+    public function offsetGet($index)
+    {
+        return $index;
+    }
   
-  public function offsetSet($index)
-  {
-    $index = $index;
-  }
+    public function offsetSet($index)
+    {
+        $index = $index;
+    }
   
-  public function offsetUnset($index)
-  {
-    unset($index);
-  }
+    public function offsetUnset($index)
+    {
+        unset($index);
+    }
 }

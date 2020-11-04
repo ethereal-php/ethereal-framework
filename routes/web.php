@@ -1,10 +1,8 @@
 <?php
 
-use Ethereal\Support\Facades\{
-  Route, 
-  View
-};
+use Ethereal\Support\Facades\Route;
+use Ethereal\Support\Facades\View;
 
-Route::get('/', function() {
-  return View::render('home');
+Route::get('/', function () {
+    return View::render('home');
 });
