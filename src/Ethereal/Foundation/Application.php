@@ -12,21 +12,26 @@ class Application extends Container
   
     public function getVersion()
     {
-        return self::RELEASE_VERSION;
+      return self::RELEASE_VERSION;
     }
   
     public function getVersionId()
     {
-        return self::RELEASE_VERSION_ID;
+      return self::RELEASE_VERSION_ID;
     }
   
     public function __construct($basePath)
     {
-        $this->useBasePath($basePath);
+      $this->useBasePath($basePath);
     }
   
     public function useBasePath(string $basePath)
     {
-        $this->basePath = realpath($basePath) ?: $basePath;
+      $this->basePath = realpath($basePath) ?: $basePath;
+    }
+    
+    public function basePath(string $path = '')
+    {
+      return $this->basePath . ($path ? DIRECTORY_SEPARATOR . $path : $path);
     }
 }
